@@ -1,0 +1,11 @@
+ENV["TERM"]="linux"
+Vagrant.configure("2") do |config|
+  config.vm.box = "opensuse/Leap-15.2.x86_64"
+  config.vm.box_version = "15.2.31.212"
+#  config.vm.network "forwarded_port", guest: 8080, host: 8111
+  config.vm.network "private_network", ip: "192.168.50.4"
+
+#  config.ssh.username = 'root'
+#  config.ssh.password = 'vagrant'
+#  config.ssh.insert_key = 'true'
+end
